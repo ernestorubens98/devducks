@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-title>Excluir Vínculo</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Gestor N1" [value]="vincula.gestor_n1" name="gestor_n1" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Gestor N2" [value]="vincula.gestor_n2" name="gestor_n2" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nome Arquiteto" [value]="vincula.nome_arquiteto" name="nome_arquiteto" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Épico Jira" [value]="vincula.epico_jira" name="epico_jira" disabled>
+    </mat-form-field>
+  </form>
+</mat-card>
+
+<button mat-raised-button (click)="deletaVinculo()" color="warn">
+  Excluir
+</button>
+
+<button mat-raised-button (click)="cancel()">
+  Cancelar
+</button>

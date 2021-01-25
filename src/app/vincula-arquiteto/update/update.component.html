@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-title>Atualizar Produto</mat-card-title>
+  <form>
+     <mat-form-field>
+      <input matInput placeholder="Gestor N1" [(ngModel)]="vincula.gestor_n1" name="gestor_n1">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Gestor N2" [(ngModel)]="vincula.gestor_n2" name="gestor_n2">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nome Arquiteto" [(ngModel)]="vincula.nome_arquiteto" name="nome_arquiteto">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Épico Jira" [(ngModel)]="vincula.epico_jira" name="epico_jira">
+    </mat-form-field>
+  </form>
+</mat-card>
+
+<button mat-raised-button (click)="updateVinculo()" color="primary">
+  Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+  Cancelar
+</button>

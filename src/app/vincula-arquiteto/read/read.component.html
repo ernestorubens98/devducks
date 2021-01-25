@@ -1,0 +1,57 @@
+<div class="mat-elevation-z5">
+  <section>
+    <article>
+      <span>Procurar arquiteto: </span>
+      <input type="text" [(ngModel)]="campoInput">
+
+        <button>procurar</button>
+    </article>
+  </section>
+
+  <section>
+    <button mat-raised-button (click)="navigateToVinculaArquiteto()" color="primary">
+      Novo Vinculo
+    </button>
+  </section>
+  <table mat-table [dataSource]="vincula">
+
+    <ng-container matColumnDef="gestor_n1">
+      <th mat-header-cell *matHeaderCellDef>Gestor N1</th>
+      <td mat-cell *matCellDef="let row">{{row.gestor_n1}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="gestor_n2">
+      <th mat-header-cell *matHeaderCellDef>Gestor N2</th>
+      <td mat-cell *matCellDef="let row">{{row.gestor_n2}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nome_arquiteto">
+      <th mat-header-cell *matHeaderCellDef>Nome Arquiteto</th>
+      <td mat-cell *matCellDef="let row">{{row.nome_arquiteto}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="epico_jira">
+      <th mat-header-cell *matHeaderCellDef>Épico Jira</th>
+      <td mat-cell *matCellDef="let row">{{row.epico_jira}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Ações</th>
+      <td mat-cell *matCellDef="let row">
+        <a routerLink="/vincula-arquiteto/update/{{ row.id }}" class="edit">
+          <i class="material-icons">
+            edit
+          </i>
+        </a>
+        <a routerLink="/vincula-arquiteto/delete/{{ row.id }}" class="delete">
+          <i class="material-icons">
+            delete
+          </i>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
