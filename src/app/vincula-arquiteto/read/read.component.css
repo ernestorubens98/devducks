@@ -1,6 +1,32 @@
+.conteudo {
+  height: 100vh;
+  background-color: #424242;
+}
+
 table {
   width: 100%;
 }
+
+.buscar {
+  padding: 10px;
+}
+
+.buscar span {
+  font-size: 24px;
+  color: white;
+}
+
+.buscar input {
+  height: 24px;
+  width: 50%;
+  border-radius: 8px;
+  outline: none;
+}
+
+.buscar button {
+  margin-left: 50px;
+}
+
 
 .edit {
   margin-right: 10px;
@@ -11,5 +37,5 @@ table {
 }
 
 .delete > i {
-  color: #e35e6b;
+  color: #c2185b;
 }

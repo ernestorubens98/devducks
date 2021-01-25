@@ -1,5 +1,7 @@
 .home {
   text-align: center;
+  height: 70vh;
+  border-radius: 0;
 }
 
 .home .title {

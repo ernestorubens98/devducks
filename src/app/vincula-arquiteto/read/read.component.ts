@@ -12,7 +12,7 @@ export class ReadComponent implements OnInit {
 
   vincula: VinculaArquiteto[] = [];
   displayedColumns = ['gestor_n1', 'gestor_n2', 'nome_arquiteto', 'epico_jira', 'action']
-  campoInput: any;
+  campoInput: any = ''
 
   constructor(private router: Router, private vinculaArquitetoService: VinculaArquitetoService) { }
 

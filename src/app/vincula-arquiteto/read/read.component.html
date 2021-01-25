@@ -1,19 +1,20 @@
-<div class="mat-elevation-z5">
-  <section>
-    <article>
-      <span>Procurar arquiteto: </span>
-      <input type="text" [(ngModel)]="campoInput">
+<div class="mat-elevation-z4 conteudo">
+  <section class="buscar">
+    <article class="nav">
+      <span>Buscar: </span>
+      <input type="text" [(ngModel)]="campoInput" placeholder="buscar">
 
-        <button>procurar</button>
+      <button mat-raised-button (click)="navigateToVinculaArquiteto()" color="accent">
+        Novo Vinculo
+      </button>
     </article>
   </section>
 
   <section>
-    <button mat-raised-button (click)="navigateToVinculaArquiteto()" color="primary">
-      Novo Vinculo
-    </button>
+
   </section>
-  <table mat-table [dataSource]="vincula">
+
+  <table mat-table [dataSource]="vincula | filter:campoInput">
 
     <ng-container matColumnDef="gestor_n1">
       <th mat-header-cell *matHeaderCellDef>Gestor N1</th>

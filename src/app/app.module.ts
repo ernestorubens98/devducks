@@ -20,6 +20,10 @@ import { MatInputModule } from '@angular/material/input';
 import { DeleteComponent } from './vincula-arquiteto/delete/delete.component';
 import { CreateComponent } from './vincula-arquiteto/create/create.component';
 import { UpdateComponent } from './vincula-arquiteto/update/update.component';
+import {MatButtonModule} from '@angular/material/button';
+
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,9 @@ import { UpdateComponent } from './vincula-arquiteto/update/update.component';
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    Ng2SearchPipeModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
